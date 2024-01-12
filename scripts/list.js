@@ -26,7 +26,7 @@ groceryList.insertBefore(otherNewListItem);
 
 
 // All <li> elements **
-allListItems = getEelementsByClassName("li");
+allListItems = document.getElementsByClassName("li");
 
 // ADD A CLASS OF COOL TO ALL LIST ITEMS **
 // Counter variable
@@ -36,6 +36,7 @@ allListItems = getEelementsByClassName("li");
 
 // ADD NUMBER OF ITEMS IN THE LIST TO THE HEADING **
 // h2 element
+const header = document.getElementsByClassName("h2");
 // h2 text
 // No. of <li> elements
 // Content
