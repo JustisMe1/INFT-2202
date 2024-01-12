@@ -6,6 +6,7 @@ var groceryList = document.getElementById("groceries");
 // ADD NEW ITEM TO END OF LIST **
 // Create element
 const newListItem = document.createElement("li");
+newListItem.setAttribute("class", "li");
 // Create text node
 const listItemText = document.createTextNode("Pizza");
 // Add text node to element
@@ -16,14 +17,14 @@ groceryList.appendChild(newListItem);
 
 // ADD NEW ITEM START OF LIST **
 // Create element
-const otherNewListItem = document.createElement("li");
+const otherListItem = document.createElement("li");
+otherListItem.setAttribute("class", "li");
 // Create text node
-const otherListItemText = document.createTextNode("Poutine");
+const otherItemText = document.createTextNode("Poutine");
 // Add text node to element
-newListItem.appendChild(otherListItemText);
+otherListItem.appendChild(otherItemText);
 // Add element to list
-groceryList.insertBefore(otherNewListItem);
-
+groceryList.insertBefore(otherListItem, groceryList.children[0]);
 
 // All <li> elements **
 allListItems = document.getElementsByClassName("li");
@@ -36,8 +37,12 @@ allListItems = document.getElementsByClassName("li");
 
 // ADD NUMBER OF ITEMS IN THE LIST TO THE HEADING **
 // h2 element
-const header = document.getElementsByClassName("h2");
+var header = document.getElementsByClassName("h2");
 // h2 text
+var headerText = "Buy Groceries</br>Items: ";
 // No. of <li> elements
+var itemNum = allListItems.length;
 // Content
+newHeaderText = headerText + itemNum;
 // Update h2 using innerHTML (not textContent) because it contains markup
+header[0].innerHTML = newHeaderText;
