@@ -31,8 +31,14 @@ allListItems = document.getElementsByClassName("li");
 
 // ADD A CLASS OF COOL TO ALL LIST ITEMS **
 // Counter variable
+counter = 0;
+listItems = groceryList.children;
 // Loop through elements
-// Change class to cool
+for (let i = 0; i < listItems.length; i++)
+{
+    // Change class to cool
+    listItems[i].setAttribute("class", "COOL");
+}
 
 
 // ADD NUMBER OF ITEMS IN THE LIST TO THE HEADING **
@@ -41,7 +47,7 @@ var header = document.getElementsByClassName("h2");
 // h2 text
 var headerText = "Buy Groceries</br>Items: ";
 // No. of <li> elements
-var itemNum = allListItems.length;
+var itemNum = groceryList.children.length;
 // Content
 newHeaderText = headerText + itemNum;
 // Update h2 using innerHTML (not textContent) because it contains markup
