@@ -1,25 +1,74 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title></title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="./style/style.css" />
-	</head>
-	<body>
-		<div id="page">
-			<h1 id="header">List</h1>
-			<h2 class ="h2">Buy groceries</h2>
-			<h2 class="displayEvent"></h2>
-			<ul id="groceries">
-				<li class ="li" id="one"><em>fresh</em> figs</li>
-				<li class ="li" id="two">pine nuts</li>
-				<li class ="li" id="three">honey</li>
-				<li class ="li" id="four">balsamic vinegar</li>
-			</ul>
-		</div>
-		<script src="./scripts/list.js"></script>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Validation & JavaScript</title>
+    
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="top-header" style="text-align: center">Registration Form</h1>
+        <form id="registration-form" name="registration-form" onsubmit="">
+            <p id="generalError"></p>
+            
+            <div class="form-group col-md-6">
+              <label for="usernameInput">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="usernameInput"
+                placeholder="Username"
+                required
+              />
+              <p id="usernameError"></p>
+            </div>
+      
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail4"
+                placeholder="Email"
+                required
+              />
+              <p id="emailError"></p>
+            </div>
+      
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword4"
+                placeholder="Password"
+                required
+              />
+              <p id="passwordError"></p>
+            </div>
+      
+            <div class="form-group col-md-6">
+              <label for="inputPhone5">Phone</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="inputPhone5"
+                placeholder="Phone Number"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+              <p id="phoneError"></p>
+            </div>
+      
+            <div class="form-group">
+              <input id="submit-reg-form" type="submit" value="Send" name="Submit" class="btn btn-primary" />
+              <input type="reset" value="Reset" name="Reset" class="btn btn-outline-primary" />
+            </div>
+        </form>
+    </div>
+  </body>
 </html>
