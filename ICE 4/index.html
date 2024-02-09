@@ -9,17 +9,13 @@
 			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
 			crossorigin="anonymous"
 		></script>
-
 		<link
 			rel="stylesheet"
 			href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap"
-			rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="import" href="navbar.html" />
 		<title>Document</title>
@@ -29,11 +25,11 @@
 		<div id="nav-holder"></div>
 		<h2>Do you like mystery stories?</h2>
 		<div id="content-div">
-			<p>
+			<p class="toggleShow">
 				Check out this excerpt from a classic Sherlock Holmes mystery:
 			</p>
 			<div id="excerpt">
-				<p id="speckled-excerpt">
+				<p class="toggleShow" id="speckled-excerpt">
 					"The building was of grey, lichen-blotched stone, with a
 					high central portion and two curving wings, like the claws
 					of a crab, thrown out on each side. In one of these wings
@@ -50,7 +46,7 @@
 					deep attention the outsides of the windows.""
 				</p>
 			</div>
-			<p id="speckled-citation">
+			<p class="toggleShow" id="speckled-citation">
 				An excerpt from Arthur Conan Doyle's
 				<a
 					id="link"
@@ -61,7 +57,7 @@
 			</p>
 		</div>
 		<!-- TO DO: create a div with a p followed by a button that will toggle the p in the div -->
-
+		<button id="toggleDivBtn">Show/Hide Div</button>
 		<!-- import the scripts -->
 		<script type="module" src="./scripts/app.js"></script>
 		<script type="module" src="./scripts/user.js"></script>
