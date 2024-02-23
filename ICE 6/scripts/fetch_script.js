@@ -33,5 +33,8 @@ $(btn_fetch).click(() =>
     .then((jsonRes) => {
         // console log the json
         console.log(jsonRes)
+
+        // Set output text
+        document.getElementById("output").textContent = jsonRes.joke
     });
 });

@@ -24,8 +24,17 @@ $(btnXHR).click(() => {
             // get the responseText
             let joke = xhr.responseText;
 
+            // JSON.parse the joke
+            let start = joke.search('<p class="subtitle">')
+            joke = joke.substring(start, start + 200);
+            let end = joke.search('</p>');
+            joke = joke.substring(20,end);
+
             // console log
             console.log(joke);
+
+            // set the output
+            document.getElementById("output").textContent = joke;
     }
     xhr.send();
 });
