@@ -1,0 +1,22 @@
+form(action="../userData" method="POST")
+    label(for="name") Name:
+    input(type="text" id="name" name="name" required)
+    br
+    label(for="age") Age:
+    input(type="number" id="age" name="age")
+    br
+    fieldset
+        legend Address(Title)
+        label(for="street") Street:
+        input(type="text" id="street" name="street")
+        br
+        label(for="city") City:
+        input(type="text" id="city" name="city")
+        br
+        label(for="state") State:
+        input(type="text" id="state" name="state")
+        br
+        label(for="zip") Zip:
+        input(type="text" id="zip" name="zip")
+    br
+    input(type="submit" value="Submit")
